@@ -1,0 +1,15 @@
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\CouchbasePortTester.exe.config
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\CouchbasePortTester.exe
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\CouchbasePortTester.pdb
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Common.Logging.Core.dll
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Common.Logging.dll
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Couchbase.NetClient.dll
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Newtonsoft.Json.dll
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Common.Logging.pdb
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Common.Logging.xml
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Common.Logging.Core.pdb
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Common.Logging.Core.xml
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Couchbase.NetClient.xml
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\bin\Debug\Newtonsoft.Json.xml
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\obj\Debug\CouchbasePortTester.exe
+c:\users\administrator\documents\visual studio 2015\Projects\CouchbasePortTester\CouchbasePortTester\obj\Debug\CouchbasePortTester.pdb
