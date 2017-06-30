@@ -1,0 +1,26 @@
+
+//Initialize the cluster
+curl -u Administrator:password -v -X POST http://localhost:8091/node/controller/setupServices -d 'services=kv'
+curl -v -X POST http://localhost:8091/nodes/self/controller/settings -d path=/apps/couchbase/data -d index_path/apps/couchbase/index
+curl -v -X POST http://localhost:8091/settings/web -d password=xxx -d username=Administrator
+
+//Add Server
+couchbase-cli server-add --cluster=ServerName:8091  --user Administrator --password xxx --server-add=localhost:8091  --server-add-username=Administrator --server-add-password=xxx --services=data
+
+//Manage TLS/SSL
+openssl rsa -in pkey.key -out pkey.key
+/opt/couchbase/bin/couchbase-cli ssl-manage -c ServerName:8091 -u Administrator -p xxx --upload-cluster-ca=Root.pem
+/opt/couchbase/bin/couchbase-cli ssl-manage -c ServerName:8091 -u ServerName:8091 -p xxx --set-node-certificate
+
+//Node Monitoring
+Leveraging our REST API (http://ServerName:8091/pools/default) gives us insight into compute resources consumed per node.
+
+//Bucket Monitoring
+Leveraging our REST API (http://:8091/pools/default) gives us insight into compute resources consumed per node.
+
+//cbstats
+REST interface (http://:8091/pools/default/buckets/<bucket name>/stats
+ cbstats -b bucket -p pwd ServerName:11210 timings
+ cbstats -b CSL_Cache -p CSLTest123 ServerName:11210 reset
+
+
