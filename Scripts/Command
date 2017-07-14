@@ -8,7 +8,15 @@ curl -v -X POST http://localhost:8091/settings/web -d password=xxx -d username=A
 couchbase-cli server-add --cluster=ServerName:8091  --user Administrator --password xxx --server-add=localhost:8091  --server-add-username=Administrator --server-add-password=xxx --services=data
 
 //Manage TLS/SSL
-openssl rsa -in pkey.key -out pkey.key
+//*Generate CSR
+openssl req -new -newkey rsa:2048 -nodes -keyout Prod_MobileSession.key -out Prod_MobileSession.csr
+
+//*Optional to unlock key
+   openssl rsa -in pkey.key -out pkey.key
+//*Optional to convert key format
+   openssl rsa -in pkey.key.pkcs8 -out pkey.key.der -outform DER
+   openssl rsa -in pkey.key.der -inform DER -out pkey.key.pkcs1 -outform PEM
+
 /opt/couchbase/bin/couchbase-cli ssl-manage -c ServerName:8091 -u Administrator -p xxx --upload-cluster-ca=Root.pem
 /opt/couchbase/bin/couchbase-cli ssl-manage -c ServerName:8091 -u ServerName:8091 -p xxx --set-node-certificate
 
