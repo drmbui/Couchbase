@@ -1,10 +1,13 @@
 
-//Initialize the cluster
+//Initialize the node
 curl -u Administrator:password -v -X POST http://localhost:8091/node/controller/setupServices -d 'services=kv'
 curl -v -X POST http://localhost:8091/nodes/self/controller/settings -d path=/apps/couchbase/data -d index_path/apps/couchbase/index
 curl -v -X POST http://localhost:8091/settings/web -d password=xxx -d username=Administrator
 
-//Add Server
+//Initialize the cluster
+./couchbase-cli cluster-init -c 10.42.33.201:8091 --cluster-username=Administrator --cluster-password=xxx --services=data --cluster-ramsize=300 --cluster-index-ramsize=256
+
+//Add Node
 couchbase-cli server-add --cluster=ServerName:8091  --user Administrator --password xxx --server-add=localhost:8091  --server-add-username=Administrator --server-add-password=xxx --services=data
 
 //Manage TLS/SSL
