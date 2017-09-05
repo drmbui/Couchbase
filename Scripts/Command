@@ -10,6 +10,9 @@ curl -v -X POST http://localhost:8091/settings/web -d password=xxx -d username=A
 //Add Node
 couchbase-cli server-add --cluster=ServerName:8091  --user Administrator --password xxx --server-add=localhost:8091  --server-add-username=Administrator --server-add-password=xxx --services=data
 
+//Create bucket
+./couchbase-cli bucket-create -c 10.42.33.201:8091 --bucket=Name --bucket-type=couchbase --bucket-ramsize=200 -u Administrator -p xxx
+
 //Manage TLS/SSL
 //*Generate CSR
 openssl req -new -newkey rsa:2048 -nodes -keyout Prod_MobileSession.key -out Prod_MobileSession.csr
